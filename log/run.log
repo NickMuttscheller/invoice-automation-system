@@ -1,0 +1,42 @@
+2026-04-13 10:15:18,966 | INFO | Starting Invoice Automation System
+2026-04-13 10:15:18,967 | INFO | Loading input data from: C:\Users\Steves Seconds\Documents\Get_Rich\Excel_60_days\scripts\invoice_automation_system\input\invoice_data.csv
+2026-04-13 10:15:18,969 | ERROR | Process failed: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "c:\Users\Steves Seconds\Documents\Get_Rich\Excel_60_days\scripts\invoice_automation_system\invoice_generator.py", line 434, in main
+    df = load_data(INPUT_FILE)
+  File "c:\Users\Steves Seconds\Documents\Get_Rich\Excel_60_days\scripts\invoice_automation_system\invoice_generator.py", line 88, in load_data
+    df = pd.read_csv(file_path)
+  File "C:\Users\Steves Seconds\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Steves Seconds\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Steves Seconds\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Steves Seconds\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Steves Seconds\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 568, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 657, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 868, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 885, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2076, in pandas._libs.parsers.raise_parser_error
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2026-04-13 10:16:40,267 | INFO | Starting Invoice Automation System
+2026-04-13 10:16:40,268 | INFO | Loading input data from: C:\Users\Steves Seconds\Documents\Get_Rich\Excel_60_days\scripts\invoice_automation_system\input\invoice_data.csv
+2026-04-13 10:16:40,279 | INFO | Loaded 6 rows
+2026-04-13 10:16:40,279 | INFO | Cleaning input data
+2026-04-13 10:16:40,296 | INFO | Data cleaned successfully
+2026-04-13 10:16:40,297 | INFO | Processing 3 invoices
+2026-04-13 10:16:40,299 | INFO | Generating invoice: INV-1001
+2026-04-13 10:16:40,326 | INFO | Created invoice file: invoice_INV-1001_Acme_Pty_Ltd.xlsx
+2026-04-13 10:16:40,327 | INFO | Generating invoice: INV-1002
+2026-04-13 10:16:40,343 | INFO | Created invoice file: invoice_INV-1002_Blue_Horizon_Co.xlsx
+2026-04-13 10:16:40,343 | INFO | Generating invoice: INV-1003
+2026-04-13 10:16:40,358 | INFO | Created invoice file: invoice_INV-1003_Northpeak_Studio.xlsx
+2026-04-13 10:16:40,394 | INFO | Created run summary: invoice_run_summary.xlsx
+2026-04-13 10:16:40,394 | INFO | Completed successfully. 3 invoice files created.
