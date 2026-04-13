@@ -17,12 +17,14 @@ It is designed as a portfolio-grade freelance automation project that demonstrat
 
 ## Project Structure
 
+```
 invoice_automation_system/
 ├── input/
 ├── output/
 ├── log/
 ├── README.md
 └── invoice_generator.py
+```
 
 ---
 
